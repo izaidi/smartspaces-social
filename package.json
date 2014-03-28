@@ -7,6 +7,7 @@
     "express": "3.x",
     "cheerio": "0.13.x",
     "request": "2.x",
-    "logfmt": "~1.1.2"
+    "logfmt": "~1.1.2",
+    "azure": "~0.8.1"
   }
 }
