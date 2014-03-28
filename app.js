@@ -35,7 +35,7 @@ app.get("/linkedin", function(req, res) {
     });
     var profile = {current: current, past: past, education: education};
     //console.log(profile);
-    res.send(resp.statusCode);
+    res.send(profile);
   });
 });
 
