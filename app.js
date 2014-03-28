@@ -34,8 +34,8 @@ app.get("/linkedin", function(req, res) {
       education.push(attended);
     });
     var profile = {current: current, past: past, education: education};
-    //console.log(profile);
-    res.send(profile);
+    console.log(profile);
+    //res.send(profile);
   });
 });
 
