@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 
 app.get("/linkedin", function(req, res) {
+  console.log('getting linkedin');
   request(req.param('url'), function(err, resp, body) {
     if (err)
       throw err;
@@ -32,10 +33,11 @@ app.get("/linkedin", function(req, res) {
       education.push(attended);
     });
     var profile = {current: current, past: past, education: education};
+    console.log(profile);
     res.send(profile);
   });
 });
 
-var server = app.listen(9000, function() {
+var server = app.listen(5000, function() {
   console.log('Listening on port %d', server.address().port);
 });
