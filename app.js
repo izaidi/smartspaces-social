@@ -6,6 +6,7 @@ var app = express();
 app.get("/linkedin", function(req, res) {
   console.log('getting linkedin');
   request(req.param('url'), function(err, resp, body) {
+    console.log(resp);
     if (err)
       throw err;
     $ = cheerio.load(body);
