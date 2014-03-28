@@ -6,7 +6,7 @@ var app = express();
 app.get("/linkedin", function(req, res) {
   console.log('getting linkedin');
   request(req.param('url'), function(err, resp, body) {
-    console.log(resp);
+    console.log(resp.statusCode);
     if (err)
       throw err;
     $ = cheerio.load(body);
@@ -34,7 +34,7 @@ app.get("/linkedin", function(req, res) {
       education.push(attended);
     });
     var profile = {current: current, past: past, education: education};
-    console.log(profile);
+    //console.log(profile);
     res.send(profile);
   });
 });
